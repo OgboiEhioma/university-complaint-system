@@ -30,7 +30,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Create FastAPI app
+# Create FastAPI app (single instance)
 app = FastAPI(
     title="University Complaint System",
     description="A comprehensive complaint management system for universities",
@@ -42,20 +42,15 @@ app = FastAPI(
 # CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",  # React frontend
-        "http://localhost:8000",  # FastAPI docs
-        "http://127.0.0.1:3000",
-        "http://127.0.0.1:8000",
-    ],
+    allow_origins=["http://localhost:5173"],  # Match frontend URL
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Allow all HTTP methods
+    allow_headers=["*"],  # Allow all headers
 )
 
 # Trust host middleware (for security)
 app.add_middleware(
-    TrustedHostMiddleware, 
+    TrustedHostMiddleware,
     allowed_hosts=["localhost", "127.0.0.1", "*.localhost"]
 )
 
@@ -63,22 +58,12 @@ app.add_middleware(
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
     start_time = time.time()
-    
-    # Log request
     logger.info(f"Request: {request.method} {request.url}")
-    
     response = await call_next(request)
-    
-    # Calculate processing time
     process_time = time.time() - start_time
-    
-    # Log response
     logger.info(f"Response: {response.status_code} - {process_time:.4f}s")
-    
-    # Add custom headers
     response.headers["X-Process-Time"] = str(process_time)
     response.headers["X-API-Version"] = "1.0.0"
-    
     return response
 
 # Exception handlers
@@ -134,9 +119,6 @@ app.include_router(api_router, prefix="/api/v1", tags=["API v1"])
 # Root endpoints
 @app.get("/")
 async def root():
-    """
-    Root endpoint with API information
-    """
     return {
         "message": "University Complaint System API",
         "version": "1.0.0",
@@ -147,17 +129,12 @@ async def root():
 
 @app.get("/health")
 async def health_check(db: Session = Depends(get_db)):
-    """
-    Health check endpoint
-    """
     try:
-        # Test database connection
         db.execute("SELECT 1")
         db_status = "healthy"
     except Exception as e:
         logger.error(f"Database health check failed: {str(e)}")
         db_status = "unhealthy"
-    
     return {
         "status": "healthy" if db_status == "healthy" else "unhealthy",
         "timestamp": time.time(),
@@ -167,18 +144,13 @@ async def health_check(db: Session = Depends(get_db)):
 
 @app.get("/stats")
 async def get_system_stats(db: Session = Depends(get_db)):
-    """
-    Get basic system statistics
-    """
     try:
-        # Get basic counts
         total_universities = db.query(models.University).count()
         total_users = db.query(models.User).count()
         total_complaints = db.query(models.Complaint).count()
         active_complaints = db.query(models.Complaint).filter(
             models.Complaint.status != models.ComplaintStatus.RESOLVED
         ).count()
-        
         return {
             "total_universities": total_universities,
             "total_users": total_users,
@@ -193,62 +165,36 @@ async def get_system_stats(db: Session = Depends(get_db)):
 # Startup and shutdown events
 @app.on_event("startup")
 async def startup_event():
-    """
-    Application startup tasks
-    """
     logger.info("🚀 Starting University Complaint System API...")
-    
-    # Test database connection
     if test_connection():
         logger.info("✅ Database connection successful")
     else:
         logger.error("❌ Database connection failed")
         return
-    
-    # Create database tables
     try:
         create_database()
         logger.info("✅ Database tables ready")
     except Exception as e:
         logger.error(f"❌ Database setup failed: {str(e)}")
         return
-    
-    # Create default data if needed
     try:
         await create_default_data()
         logger.info("✅ Default data initialized")
     except Exception as e:
         logger.error(f"❌ Default data creation failed: {str(e)}")
-    
     logger.info("🎉 Application startup completed successfully!")
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    """
-    Application shutdown tasks
-    """
     logger.info("🛑 Shutting down University Complaint System API...")
-    
-    # Perform cleanup tasks here
-    # - Close database connections
-    # - Save any pending data
-    # - Clean up temporary files
-    
     logger.info("👋 Application shutdown completed")
 
 async def create_default_data():
-    """
-    Create default universities and admin users for testing
-    """
     from app.db.database import SessionLocal
-    
     db = SessionLocal()
     try:
-        # Check if we already have data
         if db.query(models.University).count() > 0:
-            return  # Data already exists
-        
-        # Create default university
+            return
         university_data = UniversityCreate(
             name="Demo University",
             code="DEMO",
@@ -257,24 +203,18 @@ async def create_default_data():
             phone="+1-555-0123",
             email="admin@demo.edu"
         )
-        
         university = crud.university.create(db, obj_in=university_data)
         logger.info(f"Created default university: {university.name}")
-        
-        # Create default admin user
         admin_data = UserCreate(
             email="admin@demo.edu",
             username="admin",
             full_name="System Administrator",
-            password="admin123456",  # Change this in production!
+            password="admin123456",
             role=UserRole.SUPER_ADMIN,
             university_id=university.id
         )
-        
         admin_user = crud.user.create(db, obj_in=admin_data)
         logger.info(f"Created default admin user: {admin_user.username}")
-        
-        # Create demo student user
         student_data = UserCreate(
             email="student@demo.edu",
             username="student",
@@ -284,12 +224,9 @@ async def create_default_data():
             student_id="STU001",
             university_id=university.id
         )
-        
         student_user = crud.user.create(db, obj_in=student_data)
         logger.info(f"Created demo student user: {student_user.username}")
-        
         db.commit()
-        
     except Exception as e:
         db.rollback()
         logger.error(f"Error creating default data: {str(e)}")
@@ -297,14 +234,9 @@ async def create_default_data():
     finally:
         db.close()
 
-# Additional utility endpoints
 @app.post("/api/v1/system/reset-demo-data")
 async def reset_demo_data(db: Session = Depends(get_db)):
-    """
-    Reset demo data (development only)
-    """
     try:
-        # Delete all data (be careful!)
         db.query(models.Activity).delete()
         db.query(models.Message).delete()
         db.query(models.Attachment).delete()
@@ -313,14 +245,9 @@ async def reset_demo_data(db: Session = Depends(get_db)):
         db.query(models.User).delete()
         db.query(models.Department).delete()
         db.query(models.University).delete()
-        
         db.commit()
-        
-        # Recreate default data
         await create_default_data()
-        
         return {"success": True, "message": "Demo data reset successfully"}
-    
     except Exception as e:
         db.rollback()
         logger.error(f"Error resetting demo data: {str(e)}")
@@ -328,22 +255,14 @@ async def reset_demo_data(db: Session = Depends(get_db)):
 
 @app.get("/api/v1/system/backup")
 async def create_backup():
-    """
-    Create system backup (admin only)
-    """
-    # This would implement a backup mechanism
-    # For now, just return a placeholder
     return {
         "success": True,
         "message": "Backup functionality not implemented yet",
         "timestamp": time.time()
     }
 
-# Development endpoints (remove in production)
 if __name__ == "__main__":
     import uvicorn
-    
-    # Development server configuration
     uvicorn.run(
         "main:app",
         host="127.0.0.1",

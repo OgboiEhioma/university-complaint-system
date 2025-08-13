@@ -59480,3 +59480,294 @@ DETAIL:  Key (department_id)=(1) is not present in table "departments".
 [SQL: INSERT INTO complaints (title, description, category, priority, status, complainant_id, university_id, department_id, is_anonymous, incident_date, location, witnesses, resolution, resolved_at, resolved_by_id, updated_at, due_date, satisfaction_rating, feedback) VALUES (%(title)s, %(description)s, %(category)s, %(priority)s, %(status)s, %(complainant_id)s, %(university_id)s, %(department_id)s, %(is_anonymous)s, %(incident_date)s, %(location)s, %(witnesses)s, %(resolution)s, %(resolved_at)s, %(resolved_by_id)s, %(updated_at)s, %(due_date)s, %(satisfaction_rating)s, %(feedback)s) RETURNING complaints.id, complaints.created_at]
 [parameters: {'title': 'string', 'description': 'stringstri', 'category': 'ACADEMIC', 'priority': 'MEDIUM', 'status': 'SUBMITTED', 'complainant_id': 2, 'university_id': 1, 'department_id': 1, 'is_anonymous': False, 'incident_date': datetime.datetime(2025, 7, 31, 2, 59, 36, 485000, tzinfo=TzInfo(UTC)), 'location': 'string', 'witnesses': None, 'resolution': None, 'resolved_at': None, 'resolved_by_id': None, 'updated_at': None, 'due_date': None, 'satisfaction_rating': None, 'feedback': None}]
 (Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:30:31,546 - main - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-08-13 01:30:31,570 - main - INFO - Response: 200 - 0.0244s
+2025-08-13 01:30:34,001 - main - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-08-13 01:30:34,081 - main - INFO - Response: 200 - 0.0805s
+2025-08-13 01:33:30,539 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:33:44,933 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:33:49,517 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:34:07,364 - watchfiles.main - INFO - 2 changes detected
+2025-08-13 01:34:19,019 - watchfiles.main - INFO - 2 changes detected
+2025-08-13 01:34:55,227 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:34:55,599 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:35:41,735 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:35:42,101 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:36:19,845 - watchfiles.main - INFO - 2 changes detected
+2025-08-13 01:38:47,484 - watchfiles.main - INFO - 7 changes detected
+2025-08-13 01:39:01,667 - watchfiles.main - INFO - 3 changes detected
+2025-08-13 01:39:06,795 - watchfiles.main - INFO - 2 changes detected
+2025-08-13 01:39:07,153 - watchfiles.main - INFO - 2 changes detected
+2025-08-13 01:39:07,717 - watchfiles.main - INFO - 39 changes detected
+2025-08-13 01:39:08,758 - watchfiles.main - INFO - 46 changes detected
+2025-08-13 01:39:23,648 - main - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-08-13 01:39:23,651 - main - INFO - Response: 200 - 0.0030s
+2025-08-13 01:39:24,157 - main - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-08-13 01:39:24,159 - main - INFO - Response: 200 - 0.0016s
+2025-08-13 01:44:43,953 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:45:05,629 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:45:46,022 - watchfiles.main - INFO - 1646 changes detected
+2025-08-13 01:45:48,018 - watchfiles.main - INFO - 1359 changes detected
+2025-08-13 01:45:50,032 - watchfiles.main - INFO - 228 changes detected
+2025-08-13 01:45:52,013 - watchfiles.main - INFO - 965 changes detected
+2025-08-13 01:45:55,107 - watchfiles.main - INFO - 685 changes detected
+2025-08-13 01:45:56,433 - watchfiles.main - INFO - 618 changes detected
+2025-08-13 01:45:57,065 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:46:29,608 - watchfiles.main - INFO - 743 changes detected
+2025-08-13 01:46:31,846 - watchfiles.main - INFO - 1216 changes detected
+2025-08-13 01:46:33,867 - watchfiles.main - INFO - 1068 changes detected
+2025-08-13 01:46:34,772 - watchfiles.main - INFO - 365 changes detected
+2025-08-13 01:46:36,728 - watchfiles.main - INFO - 741 changes detected
+2025-08-13 01:46:39,503 - watchfiles.main - INFO - 621 changes detected
+2025-08-13 01:46:41,498 - watchfiles.main - INFO - 506 changes detected
+2025-08-13 01:46:43,105 - watchfiles.main - INFO - 341 changes detected
+2025-08-13 01:46:45,104 - watchfiles.main - INFO - 436 changes detected
+2025-08-13 01:46:47,087 - watchfiles.main - INFO - 877 changes detected
+2025-08-13 01:46:49,085 - watchfiles.main - INFO - 774 changes detected
+2025-08-13 01:46:49,947 - watchfiles.main - INFO - 290 changes detected
+2025-08-13 01:46:50,333 - watchfiles.main - INFO - 10 changes detected
+2025-08-13 01:46:50,705 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:46:51,176 - watchfiles.main - INFO - 641 changes detected
+2025-08-13 01:46:51,654 - watchfiles.main - INFO - 10 changes detected
+2025-08-13 01:46:52,005 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:46:52,360 - watchfiles.main - INFO - 9 changes detected
+2025-08-13 01:46:52,720 - watchfiles.main - INFO - 1 change detected
+2025-08-13 01:47:13,150 - watchfiles.main - INFO - 3 changes detected
+2025-08-13 01:47:13,707 - watchfiles.main - INFO - 3 changes detected
+2025-08-13 01:47:14,247 - watchfiles.main - INFO - 27 changes detected
+2025-08-13 01:48:51,643 - main - INFO - Request: OPTIONS http://localhost:8000/api/users/login
+2025-08-13 01:48:51,644 - main - INFO - Response: 400 - 0.0006s
+2025-08-13 01:51:36,460 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:51:37,147 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'string', 'full_name': 'string', 'hashed_password': '$2b$12$ncPG8v3.VWxOMI57YBH2jeLzo8FG6blnGV.ZN6q63iyv3nyuaiKIG', 'role': 'STUDENT', 'student_id': 'string', 'employee_id': 'string', 'department_id': 0, 'university_id': 1, 'phone': 'string', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:51:37,148 - main - INFO - Response: 500 - 0.6878s
+2025-08-13 01:52:22,494 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:52:22,846 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'string', 'full_name': 'string', 'hashed_password': '$2b$12$6mA4fkJv77.Q0obNWMUA6uWs/HRYrr59Xc1dfG.HIWKPZ6nL0Y.Vi', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '1', 'department_id': 0, 'university_id': 1, 'phone': 'string', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:52:22,846 - main - INFO - Response: 500 - 0.3530s
+2025-08-13 01:53:11,629 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:53:11,668 - main - ERROR - HTTP Exception: 400 - Username already taken
+2025-08-13 01:53:11,678 - main - INFO - Response: 400 - 0.0496s
+2025-08-13 01:53:13,733 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:53:13,745 - main - ERROR - HTTP Exception: 400 - Username already taken
+2025-08-13 01:53:13,745 - main - INFO - Response: 400 - 0.0121s
+2025-08-13 01:53:14,626 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:53:14,667 - main - ERROR - HTTP Exception: 400 - Username already taken
+2025-08-13 01:53:14,669 - main - INFO - Response: 400 - 0.0434s
+2025-08-13 01:53:22,953 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:53:23,238 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'student1', 'full_name': 'studen123456', 'hashed_password': '$2b$12$V/BlUr26FtKi5mh5C6aaD.fkpYzoPTSdUwqP4KgKQHI4Y3ednHbR2', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '1', 'department_id': 0, 'university_id': 1, 'phone': '09035968631', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:53:23,239 - main - INFO - Response: 500 - 0.2862s
+2025-08-13 01:53:36,031 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:53:36,338 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$PwhIvGW9lql7WumujYYAmenPO2AlJTC2Q/ciKnvkQNJB4SH/bhj12', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '1', 'department_id': 0, 'university_id': 1, 'phone': '09035968631', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:53:36,339 - main - INFO - Response: 500 - 0.3080s
+2025-08-13 01:54:07,832 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:54:08,132 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$GnpitEeYtgynjao4ii1Wau7qsc3MIty97n.w/nuTYqhHByuLRzh26', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '0', 'department_id': 0, 'university_id': 1, 'phone': '09035968631', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:54:08,132 - main - INFO - Response: 500 - 0.3007s
+2025-08-13 01:54:36,231 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/login
+2025-08-13 01:54:36,605 - main - INFO - Response: 200 - 0.3747s
+2025-08-13 01:54:57,046 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:54:57,413 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$LSJCLqF3HgVvcj4k8OkFseujStdUKU5.TzPJccXSi0WXTpepFomd2', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '0', 'department_id': 0, 'university_id': 1, 'phone': '09035968631', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:54:57,414 - main - INFO - Response: 500 - 0.3677s
+2025-08-13 01:55:10,726 - main - INFO - Request: OPTIONS http://localhost:8000/api/users/login
+2025-08-13 01:55:10,727 - main - INFO - Response: 400 - 0.0005s
+2025-08-13 01:55:22,493 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:55:22,508 - main - ERROR - HTTP Exception: 400 - Department not found
+2025-08-13 01:55:22,509 - main - INFO - Response: 400 - 0.0156s
+2025-08-13 01:55:31,602 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:55:31,998 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$GizbaAXMCsg2YK7IidjScuM8s14nvKjDiCIOZkBLdokipybUCEs0i', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '0', 'department_id': 0, 'university_id': 1, 'phone': '09035968631', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:55:31,999 - main - INFO - Response: 500 - 0.3977s
+2025-08-13 01:55:54,837 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:55:55,169 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$5wlrhtkjb9VhQBTQlOow2u2H2RrDZia2XRzYQD2LsbtUdwFaInxqG', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '0', 'department_id': 0, 'university_id': 1, 'phone': '09035968631', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:55:55,170 - main - INFO - Response: 500 - 0.3326s
+2025-08-13 01:56:05,243 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:56:05,583 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$BoWK01tK1ZUBlzuelm3She0oAeHS7ah3FfzPnjeoxxnX7DgzB4X82', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '0', 'department_id': 0, 'university_id': 1, 'phone': '1', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:56:05,584 - main - INFO - Response: 500 - 0.3410s
+2025-08-13 01:56:19,873 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:56:20,181 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$fxSXM8/0y4rYxM./u2x86O7pYDePQwADv0rGe8K4iJq1cLBpHieFe', 'role': 'STUDENT', 'student_id': '1', 'employee_id': '1', 'department_id': 0, 'university_id': 1, 'phone': '1', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:56:20,182 - main - INFO - Response: 500 - 0.3090s
+2025-08-13 01:56:35,463 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:56:35,754 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$SmIXLbgiMwGs/4GJZvyts.neFbraGKO9.chivO29gapLYwuyQEDMW', 'role': 'STUDENT', 'student_id': '3', 'employee_id': '0', 'department_id': 0, 'university_id': 1, 'phone': '1', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:56:35,754 - main - INFO - Response: 500 - 0.2916s
+2025-08-13 01:56:53,274 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:56:53,563 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'user@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$MNCt.lGLs0KVaOubOghLXujGLhsab7mtelxMADfGTowr.oyOx/GN2', 'role': 'ADMIN', 'student_id': '3', 'employee_id': '0', 'department_id': 0, 'university_id': 1, 'phone': '1', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:56:53,564 - main - INFO - Response: 500 - 0.2899s
+2025-08-13 01:57:16,957 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/register
+2025-08-13 01:57:17,261 - main - ERROR - HTTP Exception: 500 - Failed to create user: (psycopg2.errors.ForeignKeyViolation) insert or update on table "users" violates foreign key constraint "users_department_id_fkey"
+DETAIL:  Key (department_id)=(0) is not present in table "departments".
+
+[SQL: INSERT INTO users (email, username, full_name, hashed_password, role, student_id, employee_id, department_id, university_id, phone, avatar_url, is_active, is_verified, last_login, updated_at) VALUES (%(email)s, %(username)s, %(full_name)s, %(hashed_password)s, %(role)s, %(student_id)s, %(employee_id)s, %(department_id)s, %(university_id)s, %(phone)s, %(avatar_url)s, %(is_active)s, %(is_verified)s, %(last_login)s, %(updated_at)s) RETURNING users.id, users.created_at]
+[parameters: {'email': 'usertomeback@example.com', 'username': 'studentt', 'full_name': 'studen123456', 'hashed_password': '$2b$12$Gy9ppOfw10QYwjhjq3lH.ORvdoWrCQuvop/XuFBmFIoq0jA/2welG', 'role': 'ADMIN', 'student_id': '3', 'employee_id': '0', 'department_id': 0, 'university_id': 1, 'phone': '1', 'avatar_url': None, 'is_active': True, 'is_verified': False, 'last_login': None, 'updated_at': None}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-08-13 01:57:17,262 - main - INFO - Response: 500 - 0.3045s
+2025-08-13 02:02:39,540 - main - INFO - Request: OPTIONS http://localhost:8000/api/users/login
+2025-08-13 02:02:39,541 - main - INFO - Response: 400 - 0.0006s
+2025-08-13 02:05:20,675 - watchfiles.main - INFO - 2 changes detected
+2025-08-13 02:05:56,709 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/v1/auth/login
+2025-08-13 02:05:56,710 - main - INFO - Response: 400 - 0.0006s
+2025-08-13 02:06:01,838 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/v1/auth/login
+2025-08-13 02:06:01,838 - main - INFO - Response: 400 - 0.0004s
+2025-08-13 02:06:05,695 - main - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-08-13 02:06:05,696 - main - INFO - Response: 200 - 0.0006s
+2025-08-13 02:06:06,229 - main - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-08-13 02:06:06,317 - main - INFO - Response: 200 - 0.0882s
+2025-08-13 02:06:16,099 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/v1/auth/login
+2025-08-13 02:06:16,100 - main - INFO - Response: 400 - 0.0005s
+2025-08-13 02:08:21,565 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/login
+2025-08-13 02:08:21,917 - main - INFO - Response: 200 - 0.3518s
+2025-08-13 02:08:23,382 - main - INFO - Request: POST http://127.0.0.1:8000/api/v1/auth/login
+2025-08-13 02:08:23,678 - main - INFO - Response: 200 - 0.2962s
+2025-08-13 02:08:44,030 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/v1/auth/login
+2025-08-13 02:08:44,031 - main - INFO - Response: 400 - 0.0006s
+2025-08-13 02:09:22,331 - watchfiles.main - INFO - 3 changes detected
+2025-08-13 02:11:04,814 - watchfiles.main - INFO - 3 changes detected
+2025-08-13 02:11:21,369 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/v1/auth/login
+2025-08-13 02:11:21,369 - main - INFO - Response: 400 - 0.0006s
+2025-08-13 02:11:26,428 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/v1/auth/login
+2025-08-13 02:11:26,429 - main - INFO - Response: 400 - 0.0005s
+2025-08-13 02:11:45,850 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/v1/auth/login
+2025-08-13 02:11:45,851 - main - INFO - Response: 400 - 0.0005s
+2025-08-13 02:12:00,131 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/v1/auth/login
+2025-08-13 02:12:00,131 - main - INFO - Response: 400 - 0.0008s
+2025-08-13 02:15:59,723 - watchfiles.main - INFO - 2 changes detected
+2025-08-13 02:17:03,694 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:17:04,553 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:17:06,277 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:17:06,746 - watchfiles.main - INFO - 6 changes detected
+2025-08-13 02:17:31,436 - main - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-08-13 02:17:31,439 - main - INFO - Response: 200 - 0.0028s
+2025-08-13 02:17:32,255 - main - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-08-13 02:17:32,373 - main - INFO - Response: 200 - 0.1182s
+2025-08-13 02:17:50,415 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/auth/login
+2025-08-13 02:17:50,416 - main - INFO - Response: 400 - 0.0005s
+2025-08-13 02:30:46,614 - main - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-08-13 02:30:46,615 - main - INFO - Response: 200 - 0.0012s
+2025-08-13 02:30:47,161 - main - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-08-13 02:30:47,164 - main - INFO - Response: 200 - 0.0033s
+2025-08-13 02:31:02,829 - main - INFO - Request: OPTIONS http://localhost:8000/api/v1/auth/login
+2025-08-13 02:31:02,830 - main - INFO - Response: 400 - 0.0007s
+2025-08-13 02:33:39,620 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:40,387 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:41,552 - watchfiles.main - INFO - 6 changes detected
+2025-08-13 02:33:41,910 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:42,324 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:42,728 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:43,129 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:43,544 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:43,960 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:44,363 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:44,770 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:45,131 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:45,540 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:45,943 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:46,355 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:46,762 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:47,193 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:47,557 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:47,967 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:48,329 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:48,737 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:49,149 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:49,506 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:49,917 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:50,328 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:50,740 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:51,146 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:51,550 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:51,957 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:52,363 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:52,720 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:53,130 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:53,535 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:53,941 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:54,347 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:54,753 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:55,157 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:55,561 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:55,972 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:56,376 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:56,780 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:57,195 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:57,609 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:57,971 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:58,383 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:58,790 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:59,148 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:59,558 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:33:59,968 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:00,378 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:00,785 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:01,191 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:01,601 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:02,007 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:02,365 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:02,777 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:03,185 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:03,594 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:04,003 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:04,362 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:04,774 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:05,183 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:05,545 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:05,958 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:06,364 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:06,773 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:07,179 - watchfiles.main - INFO - 1 change detected
+2025-08-13 02:34:07,583 - watchfiles.main - INFO - 1 change detected
